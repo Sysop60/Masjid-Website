@@ -5,6 +5,7 @@
   --color-primary-light: #025839;
   --color-accent: #f2a752;
   --color-warm-white: #fffdfa;
-  --font-sans: var(--font-instrument-sans), system-ui, -apple-system, sans-serif;
+  --font-sans: var(--font-jakarta), system-ui, -apple-system, sans-serif;
   --font-serif: var(--font-instrument-serif), Georgia, serif;
+  --font-arabic: var(--font-lateef), "Traditional Arabic", serif;
 }

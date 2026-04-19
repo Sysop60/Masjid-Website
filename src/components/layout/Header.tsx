@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Search, Bell, User, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { NAV_ITEMS } from "@/lib/constants";
 import MobileMenu from "./MobileMenu";
 
@@ -13,7 +13,7 @@ export default function Header() {
 
   return (
     <header className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full">
-      <div className="flex items-center justify-between gap-4">
+      <div className="flex items-center justify-between gap-4 relative">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 flex-shrink-0">
           <span className="text-3xl font-medium tracking-tight text-primary font-serif">
@@ -22,7 +22,7 @@ export default function Header() {
         </Link>
 
         {/* Pill Navigation */}
-        <nav className="hidden md:flex items-center px-8 py-3 rounded-full border border-gray-200 bg-white/50 backdrop-blur-sm gap-8">
+        <nav className="hidden md:flex items-center px-8 py-3 rounded-full border border-gray-200 bg-white/50 backdrop-blur-sm gap-8 absolute left-1/2 -translate-x-1/2">
           {NAV_ITEMS.map((item, index) => (
             <div key={item.href} className="flex items-center gap-8">
               {index > 0 && (
@@ -44,22 +44,12 @@ export default function Header() {
 
         {/* Right Side */}
         <div className="flex items-center gap-4">
-          <div className="hidden sm:flex items-center gap-5 mr-2">
-            <button className="text-gray-400 hover:text-primary transition-colors">
-              <Search className="w-5 h-5" />
-            </button>
-            <button className="text-gray-400 hover:text-primary transition-colors">
-              <Bell className="w-5 h-5" />
-            </button>
-          </div>
-          <div className="hidden sm:flex items-center gap-2 pl-3 pr-2 py-1.5 rounded-full border border-gray-200 bg-white">
-            <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-accent">
-              <User className="w-[18px] h-[18px]" />
-            </div>
-            <span className="text-xs font-semibold text-gray-600 pr-2">
-              Portal
-            </span>
-          </div>
+          <Link
+            href="/spenden"
+            className="hidden sm:inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-primary text-white font-semibold hover:scale-105 active:scale-[0.97] transition-all duration-300"
+          >
+            Spenden
+          </Link>
 
           {/* Mobile Hamburger */}
           <button

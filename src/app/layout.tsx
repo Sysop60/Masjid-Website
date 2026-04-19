@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Instrument_Sans, Instrument_Serif } from "next/font/google";
+import { Instrument_Sans, Instrument_Serif, Plus_Jakarta_Sans, Lateef } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -9,6 +9,18 @@ const instrumentSans = Instrument_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   style: ["normal", "italic"],
+});
+
+const jakarta = Plus_Jakarta_Sans({
+  variable: "--font-jakarta",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+});
+
+const lateef = Lateef({
+  variable: "--font-lateef",
+  subsets: ["arabic"],
+  weight: ["400", "700"],
 });
 
 const instrumentSerif = Instrument_Serif({
@@ -35,7 +47,7 @@ export default function RootLayout({
   return (
     <html
       lang="de"
-      className={`${instrumentSans.variable} ${instrumentSerif.variable} h-full antialiased`}
+      className={`${instrumentSans.variable} ${instrumentSerif.variable} ${jakarta.variable} ${lateef.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans text-gray-900 bg-[#fffdfa]">
         <Header />
