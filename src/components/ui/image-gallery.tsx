@@ -45,7 +45,7 @@ export default function ImageGallery() {
 
       {/* Mobile: Horizontal scroll carousel */}
       <div className="md:hidden w-full mt-8">
-        <div className="flex gap-3 overflow-x-auto snap-x snap-mandatory px-4 pb-4 scrollbar-none" style={{ scrollbarWidth: "none" }}>
+        <div className="flex gap-3 overflow-x-auto overflow-y-hidden snap-x snap-mandatory px-4 pb-4 overscroll-x-contain touch-pan-x" style={{ scrollbarWidth: "none", WebkitOverflowScrolling: "touch" }}>
           {GALLERY_IMAGES.map((src, idx) => (
             <BlurFade key={idx} delay={0.1 + idx * 0.08}>
               <div className="flex-shrink-0 w-[75vw] sm:w-[60vw] h-[280px] snap-center rounded-2xl overflow-hidden">
