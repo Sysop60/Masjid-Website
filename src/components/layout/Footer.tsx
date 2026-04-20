@@ -77,12 +77,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
           {/* Tagline + Social */}
           <BlurFade direction="left" className="lg:col-span-5">
-            <h3 className="text-4xl md:text-5xl font-normal text-primary tracking-tight leading-tight font-serif">
-              Vereint im{" "}
-              <span className="italic">Glauben</span>
-              <br />
-              und Gemeinschaft
+            <h3 className="text-4xl md:text-5xl font-normal text-primary tracking-tight leading-tight font-arabic text-left" dir="rtl" lang="ar">
+              مسجد عبد الكريم الخطابي
             </h3>
+            <p className="text-sm text-gray-400 mt-2 font-sans" dir="ltr">
+              Abdel Karim Al-Khattabi Moschee, Lüdenscheid
+            </p>
 
             <div className="mt-8 flex items-center gap-3">
               <a

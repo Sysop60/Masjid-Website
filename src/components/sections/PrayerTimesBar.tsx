@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { fetchMosqueData, parsePrayerTimes } from "@/lib/mawaqit";
-import PrayerTimesContent from "./PrayerTimesContent";
-import PrayerTimesSkeleton from "./PrayerTimesSkeleton";
+import PrayerTimesContent from "@/components/ui/PrayerTimesContent";
+import PrayerTimesSkeleton from "@/components/ui/PrayerTimesSkeleton";
 
 export default function PrayerTimesBar() {
   return (

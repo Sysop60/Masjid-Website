@@ -112,7 +112,7 @@ export default function ContactLocation() {
                   <div className="flex items-center justify-end mt-1">
                     <button
                       type="submit"
-                      className="inline-flex items-center gap-2 rounded-xl bg-primary/85 backdrop-blur-xl px-5 py-3 text-sm font-medium text-white hover:bg-primary transition-colors shadow-[0_4px_16px_rgba(1,61,39,0.25)] ring-1 ring-white/15"
+                      className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white hover:scale-105 active:scale-[0.97] transition-all duration-300"
                     >
                       <Send className="w-4 h-4" />
                       Nachricht senden

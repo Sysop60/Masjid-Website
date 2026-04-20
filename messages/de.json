@@ -1,0 +1,113 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Über uns",
+    "programs": "Programm",
+    "contact": "Kontakt",
+    "donate": "Spenden",
+    "menu": "Menü",
+    "supportNow": "Jetzt unterstützen"
+  },
+  "hero": {
+    "mosqueSubtitle": "Die Abdulkarim Alkhattabi Moschee in Lüdenscheid",
+    "welcomeText": "Ein Ort der Begegnung, des Gebets und des Lernens im Herzen von Lüdenscheid. Wir laden Sie ein, Teil unserer lebendigen Gemeinschaft zu werden und gemeinsam spirituelles Wachstum zu erfahren.",
+    "prayerTimesButton": "Gebetszeiten ansehen",
+    "heroSubheading": "Spirituelle Heimat in Lüdenscheid",
+    "heroDescription": "Entdecken Sie unsere täglichen Gebete, Bildungskurse und sozialen Projekte, die unsere Gemeinschaft stärken.",
+    "donateButton": "Jetzt unterstützen"
+  },
+  "about": {
+    "headerMessage": "Eine Botschaft an euch",
+    "salutation": "Liebe Geschwister, liebe Freunde und Nachbarn in Lüdenscheid,",
+    "paragraphOne": "wie eine Karawane, die nach langer Reise einen Ort der Rast findet, so haben wir diese Räume als spirituelle Heimstätte gegründet. Die Abdulkarim Alkhattabi Moschee ist mehr als nur ein Gebäude; sie ist ein aufgeschlagenes Buch unserer gemeinsamen Geschichte.",
+    "paragraphTwo": "Unsere Wände bewahren die Stille des Gebets, während unsere Türen der Zukunft weit offen stehen. Wir pflegen die alte Tradition der Gastfreundschaft und verbinden sie mit unserem gegenwärtigen Leben in der Mitte der Gesellschaft. Ein Ort, an dem Wissen weitergegeben, Nachbarschaft gelebt und Herzen verbunden werden.",
+    "paragraphThree": "Tretet ein. Lest in unseren Zeilen, lauscht den Worten und werdet Teil dieser Geschichte, die wir jeden Tag aufs Neue gemeinsam schreiben.",
+    "closingPhrase": "In friedvoller Verbundenheit,",
+    "signature": "Die Gemeinde"
+  },
+  "offerings": {
+    "title": "Unsere",
+    "titleItalic1": "Angebote",
+    "titleAnd": "und",
+    "titleItalic2": "Aktivitäten",
+    "description": "Entdecken Sie, was unsere Moschee für die Gemeinschaft bereithält.",
+    "viewAll": "Alle Angebote",
+    "learnMore": "Mehr erfahren →",
+    "dailyPrayers": "Tägliche Gebete",
+    "dailyPrayersFreq": "Täglich, 5x am Tag",
+    "prayerHall": "Gebetshalle",
+    "quranClasses": "Qur'an- & Islamunterricht",
+    "weekly": "Wöchentlich",
+    "educationRooms": "Bildungsräume",
+    "fridaySermons": "Freitagspredigten & Vorträge",
+    "everyFriday": "Jeden Freitag",
+    "youthFamily": "Jugend- & Familienarbeit",
+    "regularly": "Regelmäßig",
+    "communitySpaces": "Gemeinderäume",
+    "socialProjects": "Soziale Projekte & Hilfe",
+    "ongoing": "Laufend",
+    "communityCity": "Gemeinde & Stadt",
+    "celebrations": "Feste & Feiertage",
+    "eidRamadan": "Eid, Ramadan & mehr",
+    "wholeMosque": "Gesamte Moschee"
+  },
+  "features": {
+    "educationTag": "Bildung & Werte",
+    "knowledgeTitle": "Wissen für die nächste Generation.",
+    "knowledgeDesc": "Unsere Programme bieten tiefgreifendes Verständnis des Glaubens kombiniert mit modernen pädagogischen Ansätzen für Kinder und Erwachsene.",
+    "courseProgram": "Kursprogramm 2024",
+    "learnMore": "Mehr erfahren",
+    "diversityTitle": "Ein Ort der Vielfalt und des Miteinanders.",
+    "diversityDesc": "Von interkulturellen Begegnungen bis hin zu humanitärer Hilfe – wir engagieren uns für ein starkes Lüdenscheid.",
+    "becomeMember": "Mitglied werden"
+  },
+  "prayer": {
+    "title": "Aktuelle",
+    "titleItalic": "Gebetszeiten",
+    "validFor": "Gültig für:",
+    "fridayPrayer": "صلاة الجمعة — Freitagsgebet",
+    "timeUnit": "Uhr",
+    "adhan": "Adhan",
+    "time": "Zeit",
+    "iqama": "Iqama",
+    "error": "Gebetszeiten konnten nicht geladen werden."
+  },
+  "contact": {
+    "title": "Kontakt &",
+    "titleItalic": "Anfahrt",
+    "subtitle": "Besuche uns, schreibe uns oder folge unseren Kanälen.",
+    "nameLabel": "Name",
+    "namePlaceholder": "Dein Name",
+    "emailLabel": "E-Mail",
+    "emailPlaceholder": "dein@mail.de",
+    "messageLabel": "Nachricht",
+    "messagePlaceholder": "Wie können wir helfen?",
+    "sendButton": "Nachricht senden",
+    "mapTitle": "Karte"
+  },
+  "footer": {
+    "mosqueSubtitle": "Abdel Karim Al-Khattabi Moschee, Lüdenscheid",
+    "offeringsSection": "Angebote",
+    "dailyPrayers": "Tägliche Gebete",
+    "quranClasses": "Qur'an-Unterricht",
+    "fridaySermons": "Freitagspredigten",
+    "youthWork": "Jugendarbeit",
+    "socialProjects": "Soziale Projekte",
+    "navigationSection": "Navigation",
+    "linksSection": "Links",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz",
+    "contact": "Kontakt",
+    "donate": "Spenden"
+  },
+  "gallery": {
+    "title": "Einblicke in unsere",
+    "titleItalic": "Moschee",
+    "description": "Entdecken Sie die Atmosphäre, Architektur und das Gemeindeleben in unserer Moschee."
+  },
+  "metadata": {
+    "siteTitle": "Abdulkarim Alkhattabi Moschee – Lüdenscheid",
+    "siteTitleTemplate": "%s | Abdulkarim Alkhattabi Moschee",
+    "siteDescription": "Ein Ort der Begegnung, des Gebets und des Lernens im Herzen von Lüdenscheid."
+  }
+}
