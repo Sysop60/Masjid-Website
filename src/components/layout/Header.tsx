@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
@@ -9,60 +9,69 @@ import MobileMenu from "./MobileMenu";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
-  return (
-    <header className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full">
-      <div className="flex items-center justify-between gap-4 relative">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 flex-shrink-0">
-          <span className="text-3xl font-medium tracking-tight text-primary font-serif">
-            AAM
-          </span>
-        </Link>
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
-        {/* Pill Navigation */}
-        <nav className="hidden md:flex items-center px-8 py-3 rounded-full border border-gray-200 bg-white/50 backdrop-blur-sm gap-8 absolute left-1/2 -translate-x-1/2">
-          {NAV_ITEMS.map((item, index) => (
-            <div key={item.href} className="flex items-center gap-8">
-              {index > 0 && (
-                <div className="w-1.5 h-1.5 rounded-full bg-accent" />
-              )}
+  return (
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+          ? "py-3 bg-white/70 backdrop-blur-xl border-b border-gray-200/50 shadow-[0_1px_3px_rgba(0,0,0,0.04)]"
+          : "py-6 bg-transparent"
+        }`}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between gap-4 relative">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-2 flex-shrink-0">
+            <span className="text-2xl font-medium tracking-tight text-primary font-serif">
+              AAM
+            </span>
+          </Link>
+
+          {/* Navigation */}
+          <nav className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
+            {NAV_ITEMS.map((item) => (
               <Link
+                key={item.href}
                 href={item.href}
-                className={`text-sm font-medium transition-colors ${
-                  pathname === item.href
-                    ? "text-primary"
+                className={`text-sm transition-colors ${pathname === item.href
+                    ? "text-primary font-medium"
                     : "text-gray-400 hover:text-primary"
-                }`}
+                  }`}
               >
                 {item.label}
               </Link>
-            </div>
-          ))}
-        </nav>
+            ))}
+          </nav>
 
-        {/* Right Side */}
-        <div className="flex items-center gap-4">
-          <Link
-            href="/spenden"
-            className="hidden sm:inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-primary text-white font-semibold hover:scale-105 active:scale-[0.97] transition-all duration-300"
-          >
-            Spenden
-          </Link>
+          {/* Right Side */}
+          <div className="flex items-center gap-4">
+            <Link
+              href="https://www.paypal.com/donate?business=mkv-lued%40gmx.de"
+              className="hidden sm:inline-flex items-center px-5 py-2 rounded-full bg-primary text-white text-sm font-medium hover:scale-105 active:scale-[0.97] transition-all duration-300"
+            >
+              Spenden
+            </Link>
 
-          {/* Mobile Hamburger */}
-          <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 text-gray-700 hover:text-primary transition"
-            aria-label="Menü"
-          >
-            {mobileOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
-          </button>
+            {/* Mobile Hamburger */}
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="md:hidden p-2 text-gray-700 hover:text-primary transition"
+              aria-label="Menü"
+            >
+              {mobileOpen ? (
+                <X className="w-5 h-5" />
+              ) : (
+                <Menu className="w-5 h-5" />
+              )}
+            </button>
+          </div>
         </div>
       </div>
 

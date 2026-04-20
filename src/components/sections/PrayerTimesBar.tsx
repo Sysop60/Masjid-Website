@@ -1,36 +1,45 @@
-import { PRAYER_TIMES } from "@/lib/constants";
-import BlurFade from "@/components/ui/blur-fade";
+import { Suspense } from "react";
+import { fetchMosqueData, parsePrayerTimes } from "@/lib/mawaqit";
+import PrayerTimesContent from "./PrayerTimesContent";
+import PrayerTimesSkeleton from "./PrayerTimesSkeleton";
 
 export default function PrayerTimesBar() {
   return (
-    <section
-      id="gebetszeiten"
-      className="bg-white border-y border-gray-100 py-10"
-    >
+    <section id="gebetszeiten" className="bg-white border-y border-gray-100 py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-          {PRAYER_TIMES.map((prayer, idx) => (
-            <BlurFade key={prayer.name} delay={idx * 0.1}>
-              <div
-                className={`flex flex-col border-l-2 pl-4 ${
-                  prayer.active ? "border-accent" : "border-accent/20"
-                }`}
-              >
-                <span
-                  className={`text-xs font-medium uppercase tracking-widest ${
-                    prayer.active ? "text-accent" : "text-gray-400"
-                  }`}
-                >
-                  {prayer.name}
-                </span>
-                <span className="text-2xl font-medium text-primary font-serif">
-                  {prayer.time}
-                </span>
-              </div>
-            </BlurFade>
-          ))}
-        </div>
+        <Suspense fallback={<PrayerTimesSkeleton />}>
+          <PrayerTimesData />
+        </Suspense>
       </div>
     </section>
+  );
+}
+
+async function PrayerTimesData() {
+  const data = await fetchMosqueData();
+
+  if (!data) {
+    return (
+      <p className="text-center text-gray-400 py-8">
+        Gebetszeiten konnten nicht geladen werden.
+      </p>
+    );
+  }
+
+  const prayers = parsePrayerTimes(data);
+
+  const today = new Date().toLocaleDateString("de-DE", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+  });
+
+  return (
+    <PrayerTimesContent
+      prayers={prayers}
+      jumua={data.jumua}
+      date={today}
+      address={data.localisation}
+    />
   );
 }

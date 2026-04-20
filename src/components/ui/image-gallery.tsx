@@ -5,7 +5,7 @@ import BlurFade from "@/components/ui/blur-fade";
 const GALLERY_IMAGES = [
   "https://images.unsplash.com/photo-1564769625905-50e93615e769?q=80&h=800&w=800&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?q=80&h=800&w=800&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1591604129939-f1efa4f9b7eb?q=80&h=800&w=800&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1609599006353-e629aaabfeae?q=80&h=800&w=800&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1542816417-0983c9c9ad53?q=80&h=800&w=800&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1519817650390-64a93db51149?q=80&h=800&w=800&auto=format&fit=crop",
   "https://images.unsplash.com/photo-1466442929976-97f336a657be?q=80&h=800&w=800&auto=format&fit=crop",
@@ -31,7 +31,7 @@ export default function ImageGallery() {
           {GALLERY_IMAGES.map((src, idx) => (
             <div
               key={idx}
-              className="relative group flex-grow transition-all w-56 rounded-xl overflow-hidden h-[400px] duration-500 hover:w-full"
+              className="relative group flex-grow transition-all w-56 rounded-xl overflow-hidden h-[400px] duration-1000 ease-in-out hover:w-full"
             >
               <img
                 className="h-full w-full object-cover object-center"
