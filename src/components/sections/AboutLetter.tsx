@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Leaf } from "lucide-react";
 import mosaicPattern from "@/assets/images/Gemini_Generated_Image_mbc1twmbc1twmbc1.png";
 import BlurFade from "@/components/ui/blur-fade";
 
@@ -7,11 +6,10 @@ export default function AboutLetter() {
   return (
     <section
       id="ueber-uns"
-      className="relative py-32 bg-warm-white overflow-hidden"
+      className="relative py-24 sm:py-32 bg-warm-white overflow-hidden"
     >
-      {/* Islamic mosaic pattern - large behind the card */}
+      {/* Islamic mosaic pattern - large behind the card (UNCHANGED) */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Oben rechts */}
         <Image
           src={mosaicPattern}
           alt=""
@@ -19,7 +17,6 @@ export default function AboutLetter() {
           style={{ maskImage: "radial-gradient(ellipse, black 30%, transparent 70%)" }}
           aria-hidden="true"
         />
-        {/* Unten links */}
         <Image
           src={mosaicPattern}
           alt=""
@@ -27,7 +24,6 @@ export default function AboutLetter() {
           style={{ maskImage: "radial-gradient(ellipse, black 30%, transparent 70%)" }}
           aria-hidden="true"
         />
-        {/* Oben links */}
         <Image
           src={mosaicPattern}
           alt=""
@@ -35,7 +31,6 @@ export default function AboutLetter() {
           style={{ maskImage: "radial-gradient(ellipse, black 30%, transparent 70%)" }}
           aria-hidden="true"
         />
-        {/* Unten rechts */}
         <Image
           src={mosaicPattern}
           alt=""
@@ -45,61 +40,100 @@ export default function AboutLetter() {
         />
       </div>
 
-      <BlurFade duration={1} className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="bg-white border border-gray-100 rounded-tr-[64px] rounded-bl-[64px] p-10 md:p-20 relative shadow-[0_8px_30px_rgb(0,0,0,0.02)]">
-          {/* Minimalist Ornament / Fold lines */}
-          <div className="absolute top-0 right-16 w-[1px] h-24 bg-gradient-to-b from-transparent via-accent to-transparent opacity-50 hidden md:block" />
-          <div className="absolute bottom-0 left-16 w-[1px] h-24 bg-gradient-to-t from-transparent via-accent to-transparent opacity-50 hidden md:block" />
+      <BlurFade duration={1} className="relative w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+        {/* The Letter Container */}
+        <div
+          className="rounded-2xl sm:rounded-3xl relative overflow-hidden"
+          style={{
+            background: "linear-gradient(135deg, #FFFFFF 0%, #FCFBF9 100%)",
+            boxShadow:
+              "0 4px 6px -1px rgba(0,0,0,0.02), 0 10px 15px -3px rgba(0,0,0,0.02), 0 20px 40px -10px rgba(0,0,0,0.03), inset 0 0 0 1px rgba(231,229,228,0.5)",
+          }}
+        >
+          {/* Inner Oriental Frame */}
+          <div className="absolute inset-3 sm:inset-6 border border-gray-200/60 rounded-xl sm:rounded-2xl pointer-events-none">
+            {/* Corner Accents */}
+            <div className="absolute -top-1 -left-1 w-2 h-2 border border-gray-300 bg-gray-50 rounded-sm" />
+            <div className="absolute -top-1 -right-1 w-2 h-2 border border-gray-300 bg-gray-50 rounded-sm" />
+            <div className="absolute -bottom-1 -left-1 w-2 h-2 border border-gray-300 bg-gray-50 rounded-sm" />
+            <div className="absolute -bottom-1 -right-1 w-2 h-2 border border-gray-300 bg-gray-50 rounded-sm" />
+          </div>
 
-          <div className="relative z-10 flex flex-col gap-10">
-            {/* Salutation Header */}
-            <div className="space-y-4">
-              <p className="text-xs font-semibold text-accent uppercase tracking-[0.2em]">
+          {/* Content Area */}
+          <div className="relative p-8 sm:p-16 md:p-24 flex flex-col gap-12 sm:gap-16">
+            {/* Header */}
+            <div className="flex items-center justify-center gap-4">
+              <div className="h-px bg-gray-200 flex-1 max-w-[60px]" />
+              <p className="text-xs font-medium text-gray-400 uppercase tracking-[0.2em] text-center">
                 Eine Botschaft an euch
               </p>
-              <h2 className="text-3xl md:text-7xl font-normal text-primary tracking-tight leading-snug font-arabic" dir="rtl" lang="ar">
-                بِسْمِ السَّلَامِوَالرَّحْمَةِ
-              </h2>
+              <div className="h-px bg-gray-200 flex-1 max-w-[60px]" />
             </div>
+
+            {/* Arabic Salutation */}
+            <BlurFade delay={0.2}>
+              <div className="text-center">
+                <h2
+                  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-primary tracking-tight font-arabic"
+                  dir="rtl"
+                  lang="ar"
+                  style={{ lineHeight: 1.4 }}
+                >
+                  بِسْمِ السَّلَامِ وَالرَّحْمَةِ
+                </h2>
+              </div>
+            </BlurFade>
 
             {/* Letter Body */}
-            <div className="space-y-8 text-lg text-gray-500 leading-[2] font-normal max-w-2xl">
-              <p>
-                Liebe Geschwister, liebe Freunde und Nachbarn in Lüdenscheid,
-              </p>
-              <p>
-                wie eine Karawane, die nach langer Reise einen Ort der Rast findet,
-                so haben wir diese Räume als spirituelle Heimstätte gegründet. Die
-                Abdulkarim Alkhattabi Moschee ist mehr als nur ein Gebäude; sie ist
-                ein aufgeschlagenes Buch unserer gemeinsamen Geschichte.
-              </p>
-              <p>
-                Unsere Wände bewahren die Stille des Gebets, während unsere Türen
-                der Zukunft weit offen stehen. Wir pflegen die alte Tradition der
-                Gastfreundschaft und verbinden sie mit unserem gegenwärtigen Leben
-                in der Mitte der Gesellschaft. Ein Ort, an dem Wissen
-                weitergegeben, Nachbarschaft gelebt und Herzen verbunden werden.
-              </p>
-              <p>
-                Tretet ein. Lest in unseren Zeilen, lauscht den Worten und werdet
-                Teil dieser Geschichte, die wir jeden Tag aufs Neue gemeinsam
-                schreiben.
-              </p>
-            </div>
+            <BlurFade delay={0.3}>
+              <div className="space-y-6 sm:space-y-8 text-base sm:text-lg text-gray-500 leading-[2.2] sm:leading-[2.4] font-light max-w-2xl mx-auto relative">
+                {/* Decorative quote line */}
+                <div className="absolute -left-4 sm:-left-8 top-2 bottom-2 w-px bg-gradient-to-b from-transparent via-gray-200 to-transparent" />
 
-            {/* Sign-off / "Seal" */}
-            <div className="pt-8 flex flex-col md:flex-row md:items-end justify-between gap-8 border-t border-gray-50 mt-4">
-              <div className="text-left md:text-right">
-                <p className="text-2xl text-primary mb-1 tracking-tight font-serif">
-                  In friedvoller Verbundenheit,
+                <p className="text-primary font-medium">
+                  Liebe Geschwister, liebe Freunde und Nachbarn in Lüdenscheid,
                 </p>
-                <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest">
-                  Die Gemeinde
+                <p>
+                  wie eine Karawane, die nach langer Reise einen Ort der Rast findet,
+                  so haben wir diese Räume als spirituelle Heimstätte gegründet. Die
+                  Abdulkarim Alkhattabi Moschee ist mehr als nur ein Gebäude; sie ist
+                  ein aufgeschlagenes Buch unserer gemeinsamen Geschichte.
+                </p>
+                <p>
+                  Unsere Wände bewahren die Stille des Gebets, während unsere Türen
+                  der Zukunft weit offen stehen. Wir pflegen die alte Tradition der
+                  Gastfreundschaft und verbinden sie mit unserem gegenwärtigen Leben
+                  in der Mitte der Gesellschaft. Ein Ort, an dem Wissen
+                  weitergegeben, Nachbarschaft gelebt und Herzen verbunden werden.
+                </p>
+                <p>
+                  Tretet ein. Lest in unseren Zeilen, lauscht den Worten und werdet
+                  Teil dieser Geschichte, die wir jeden Tag aufs Neue gemeinsam
+                  schreiben.
                 </p>
               </div>
-            </div>
+            </BlurFade>
+
+            {/* Footer / Seal */}
+            <BlurFade delay={0.4}>
+              <div className="mt-8 pt-10 border-t border-gray-100 flex flex-col sm:flex-row items-center sm:items-end justify-between gap-8 sm:gap-12">
+                <div className="text-center sm:text-left space-y-3">
+                  <p className="text-xl sm:text-2xl text-primary tracking-tight font-serif italic">
+                    In friedvoller Verbundenheit,
+                  </p>
+                  <p className="text-xs font-medium text-gray-400 uppercase tracking-[0.15em]">
+                    Die Gemeinde
+                  </p>
+                </div>
+
+                <span className="text-3xl sm:text-4xl font-arabic text-primary/50 leading-none select-none flex-shrink-0" dir="rtl" lang="ar">سلام</span>
+              </div>
+            </BlurFade>
           </div>
         </div>
+
+        {/* Ambient shadow below the letter */}
+        <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-3/4 h-8 bg-primary/5 blur-2xl rounded-full pointer-events-none" />
       </BlurFade>
     </section>
   );
