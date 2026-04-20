@@ -22,6 +22,7 @@ export default function PrayerTimesContent({ prayers, jumua, date }: Props) {
             <h2 className="text-2xl md:text-3xl font-normal tracking-tight text-primary font-serif">
               Aktuelle <span className="italic">Gebetszeiten</span>
             </h2>
+            <p>Quelle: Mawaqit</p>
             <div className="flex items-center gap-2 text-sm text-gray-500">
               <Calendar className="w-4 h-4" />
               <span>Gültig für:</span>
@@ -59,17 +60,15 @@ export default function PrayerTimesContent({ prayers, jumua, date }: Props) {
         {prayers.map((prayer, idx) => (
           <BlurFade key={prayer.name} delay={idx * 0.08}>
             <div
-              className={`flex flex-col border-l-2 pl-4 transition-colors duration-300 ${
-                prayer.active
-                  ? "border-accent"
-                  : "border-gray-100 hover:border-gray-200"
-              }`}
+              className={`flex flex-col border-l-2 pl-4 transition-colors duration-300 ${prayer.active
+                ? "border-accent"
+                : "border-gray-100 hover:border-gray-200"
+                }`}
             >
               <div className="flex items-baseline gap-2 mb-3">
                 <span
-                  className={`text-xs font-medium uppercase tracking-widest block ${
-                    prayer.active ? "text-accent" : "text-gray-400"
-                  }`}
+                  className={`text-xs font-medium uppercase tracking-widest block ${prayer.active ? "text-accent" : "text-gray-400"
+                    }`}
                 >
                   {prayer.name}
                 </span>

@@ -52,11 +52,6 @@ export default function AboutLetter() {
         >
           {/* Inner Oriental Frame */}
           <div className="absolute inset-3 sm:inset-6 border border-gray-200/60 rounded-xl sm:rounded-2xl pointer-events-none">
-            {/* Corner Accents */}
-            <div className="absolute -top-1 -left-1 w-2 h-2 border border-gray-300 bg-gray-50 rounded-sm" />
-            <div className="absolute -top-1 -right-1 w-2 h-2 border border-gray-300 bg-gray-50 rounded-sm" />
-            <div className="absolute -bottom-1 -left-1 w-2 h-2 border border-gray-300 bg-gray-50 rounded-sm" />
-            <div className="absolute -bottom-1 -right-1 w-2 h-2 border border-gray-300 bg-gray-50 rounded-sm" />
           </div>
 
           {/* Content Area */}
@@ -79,7 +74,7 @@ export default function AboutLetter() {
                   lang="ar"
                   style={{ lineHeight: 1.4 }}
                 >
-                  بِسْمِ السَّلَامِ وَالرَّحْمَةِ
+                  بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ
                 </h2>
               </div>
             </BlurFade>
@@ -94,22 +89,22 @@ export default function AboutLetter() {
                   Liebe Geschwister, liebe Freunde und Nachbarn in Lüdenscheid,
                 </p>
                 <p>
-                  wie eine Karawane, die nach langer Reise einen Ort der Rast findet,
-                  so haben wir diese Räume als spirituelle Heimstätte gegründet. Die
-                  Abdulkarim Alkhattabi Moschee ist mehr als nur ein Gebäude; sie ist
-                  ein aufgeschlagenes Buch unserer gemeinsamen Geschichte.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                  enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                  nisi ut aliquip ex ea commodo consequat.
                 </p>
                 <p>
-                  Unsere Wände bewahren die Stille des Gebets, während unsere Türen
-                  der Zukunft weit offen stehen. Wir pflegen die alte Tradition der
-                  Gastfreundschaft und verbinden sie mit unserem gegenwärtigen Leben
-                  in der Mitte der Gesellschaft. Ein Ort, an dem Wissen
-                  weitergegeben, Nachbarschaft gelebt und Herzen verbunden werden.
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum. Sed ut perspiciatis unde omnis
+                  iste natus error sit voluptatem accusantium doloremque.
                 </p>
                 <p>
-                  Tretet ein. Lest in unseren Zeilen, lauscht den Worten und werdet
-                  Teil dieser Geschichte, die wir jeden Tag aufs Neue gemeinsam
-                  schreiben.
+                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                  odit aut fugit, sed quia consequuntur magni dolores eos qui
+                  ratione voluptatem sequi nesciunt.
                 </p>
               </div>
             </BlurFade>
@@ -125,8 +120,6 @@ export default function AboutLetter() {
                     Die Gemeinde
                   </p>
                 </div>
-
-                <span className="text-3xl sm:text-4xl font-arabic text-primary/50 leading-none select-none flex-shrink-0" dir="rtl" lang="ar">سلام</span>
               </div>
             </BlurFade>
           </div>

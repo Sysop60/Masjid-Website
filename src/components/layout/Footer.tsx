@@ -83,30 +83,6 @@ export default function Footer() {
             <p className="text-sm text-gray-400 mt-2 font-sans" dir="ltr">
               Abdel Karim Al-Khattabi Moschee, Lüdenscheid
             </p>
-
-            <div className="mt-8 flex items-center gap-3">
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary/40 transition-colors"
-                aria-label="Facebook"
-              >
-                <FacebookIcon className="w-4 h-4" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary/40 transition-colors"
-                aria-label="Twitter"
-              >
-                <TwitterIcon className="w-4 h-4" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary/40 transition-colors"
-                aria-label="YouTube"
-              >
-                <YoutubeIcon className="w-4 h-4" />
-              </a>
-            </div>
           </BlurFade>
 
           {/* Angebote */}

@@ -52,12 +52,14 @@ export default function Header() {
 
           {/* Right Side */}
           <div className="flex items-center gap-4">
-            <Link
+            <a
               href="https://www.paypal.com/donate?business=mkv-lued%40gmx.de"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hidden sm:inline-flex items-center px-5 py-2 rounded-full bg-primary text-white text-sm font-medium hover:scale-105 active:scale-[0.97] transition-all duration-300"
             >
               Spenden
-            </Link>
+            </a>
 
             {/* Mobile Hamburger */}
             <button
