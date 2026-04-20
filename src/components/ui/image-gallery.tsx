@@ -13,20 +13,21 @@ const GALLERY_IMAGES = [
 
 export default function ImageGallery() {
   return (
-    <section className="w-full flex flex-col items-center justify-start py-20">
+    <section className="w-full flex flex-col items-center justify-start py-12 sm:py-20">
       <BlurFade className="max-w-3xl text-center px-4">
-        <h2 className="text-4xl md:text-5xl font-normal text-primary tracking-tight font-serif">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-normal text-primary tracking-tight font-serif">
           Einblicke in unsere{" "}
           <span className="italic">Moschee</span>
         </h2>
-        <p className="text-sm text-gray-500 mt-3">
+        <p className="text-sm text-gray-500 mt-3 px-2">
           Entdecken Sie die Atmosphäre, Architektur und das Gemeindeleben in
           unserer Moschee.
         </p>
       </BlurFade>
 
-      <BlurFade delay={0.2} duration={1}>
-        <div className="flex items-center gap-2 h-[400px] w-full max-w-6xl mt-10 px-4">
+      {/* Desktop: Horizontal expand gallery */}
+      <BlurFade delay={0.2} duration={1} className="hidden md:block w-full">
+        <div className="flex items-center gap-2 h-[400px] w-full max-w-6xl mx-auto mt-10 px-4">
           {GALLERY_IMAGES.map((src, idx) => (
             <div
               key={idx}
@@ -41,6 +42,23 @@ export default function ImageGallery() {
           ))}
         </div>
       </BlurFade>
+
+      {/* Mobile: Horizontal scroll carousel */}
+      <div className="md:hidden w-full mt-8">
+        <div className="flex gap-3 overflow-x-auto snap-x snap-mandatory px-4 pb-4 scrollbar-none" style={{ scrollbarWidth: "none" }}>
+          {GALLERY_IMAGES.map((src, idx) => (
+            <BlurFade key={idx} delay={0.1 + idx * 0.08}>
+              <div className="flex-shrink-0 w-[75vw] sm:w-[60vw] h-[280px] snap-center rounded-2xl overflow-hidden">
+                <img
+                  className="h-full w-full object-cover object-center"
+                  src={src}
+                  alt={`Galerie ${idx + 1}`}
+                />
+              </div>
+            </BlurFade>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
