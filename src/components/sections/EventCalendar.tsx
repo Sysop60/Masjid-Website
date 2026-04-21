@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowRight, Calendar, MapPin } from "lucide-react";
+import { Calendar, MapPin } from "lucide-react";
 import BlurFade from "@/components/ui/BlurFade";
 import imgGebete from "@/assets/images/muslim-praying-sujud-posture.jpg";
 import imgQuran from "@/assets/images/muslims-reading-from-quran.jpg";
@@ -56,18 +56,9 @@ export default function EventCalendar() {
             Unsere <span className="italic">Angebote</span> und{" "}
             <span className="italic">Aktivitäten</span>
           </h2>
-          <div className="flex items-center justify-between">
-            <p className="text-white/50 text-sm max-w-md">
-              Entdecken Sie, was unsere Moschee für die Gemeinschaft bereithält.
-            </p>
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 text-xs font-semibold text-white/40 uppercase tracking-wider hover:text-accent transition-colors"
-            >
-              Alle Angebote
-              <ArrowRight className="w-3.5 h-3.5" />
-            </a>
-          </div>
+          <p className="text-white/50 text-sm max-w-md">
+            Entdecken Sie, was unsere Moschee für die Gemeinschaft bereithält.
+          </p>
         </BlurFade>
 
         {/* Grid */}
