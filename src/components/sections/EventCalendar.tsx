@@ -47,27 +47,22 @@ const OFFERINGS = [
 
 export default function EventCalendar() {
   return (
-    <section id="angebote" className="relative py-32 overflow-hidden">
-      {/* Overlay + soft edge gradients */}
-      <div className="absolute inset-0 bg-warm-white/70" />
-      <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-white to-transparent" />
-      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent" />
-
+    <section id="angebote" className="relative py-32 overflow-hidden bg-primary">
       {/* Content */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <BlurFade className="mb-10">
-          <h2 className="text-4xl md:text-5xl font-normal text-primary tracking-tight mb-4 font-serif">
+          <h2 className="text-4xl md:text-5xl font-normal text-white tracking-tight mb-4 font-serif">
             Unsere <span className="italic">Angebote</span> und{" "}
             <span className="italic">Aktivitäten</span>
           </h2>
           <div className="flex items-center justify-between">
-            <p className="text-gray-400 text-sm max-w-md">
+            <p className="text-white/50 text-sm max-w-md">
               Entdecken Sie, was unsere Moschee für die Gemeinschaft bereithält.
             </p>
             <a
               href="#"
-              className="inline-flex items-center gap-2 text-xs font-semibold text-gray-400 uppercase tracking-wider hover:text-primary transition-colors"
+              className="inline-flex items-center gap-2 text-xs font-semibold text-white/40 uppercase tracking-wider hover:text-accent transition-colors"
             >
               Alle Angebote
               <ArrowRight className="w-3.5 h-3.5" />
@@ -81,7 +76,7 @@ export default function EventCalendar() {
             <BlurFade key={item.title} delay={0.1 + idx * 0.1}>
               <div className="group flex items-start gap-5">
                 {/* Arch-shaped Image */}
-                <div className="relative w-40 h-52 flex-shrink-0 overflow-hidden bg-gray-100 rounded-full">
+                <div className="relative w-40 h-52 flex-shrink-0 overflow-hidden bg-white/10 rounded-full">
                   <Image
                     src={item.image}
                     alt={item.title}
@@ -92,22 +87,22 @@ export default function EventCalendar() {
 
                 {/* Text Content */}
                 <div className="flex flex-col justify-center min-h-[9rem]">
-                  <h3 className="text-base font-semibold text-primary leading-snug mb-3">
+                  <h3 className="text-base font-semibold text-white leading-snug mb-3">
                     {item.title}
                   </h3>
 
                   <div className="flex flex-col gap-1.5 mb-4">
-                    <div className="flex items-center gap-2 text-xs text-gray-400">
+                    <div className="flex items-center gap-2 text-xs text-white/40">
                       <Calendar className="w-3.5 h-3.5" />
                       <span>{item.meta1}</span>
                     </div>
-                    <div className="flex items-center gap-2 text-xs text-gray-400">
+                    <div className="flex items-center gap-2 text-xs text-white/40">
                       <MapPin className="w-3.5 h-3.5" />
                       <span>{item.meta2}</span>
                     </div>
                   </div>
 
-                  <span className="text-xs font-semibold uppercase tracking-wider text-primary group-hover:text-accent transition-colors cursor-pointer">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-white/60 group-hover:text-accent transition-colors cursor-pointer">
                     Mehr erfahren →
                   </span>
                 </div>

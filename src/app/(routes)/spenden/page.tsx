@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Agentation } from "agentation";
 
 export const metadata: Metadata = {
   title: "Spenden",
@@ -7,8 +8,11 @@ export const metadata: Metadata = {
 
 export default function SpendenPage() {
   return (
-    <main>
-      {/* TODO: Spenden-Seite implementieren */}
-    </main>
+    <>
+      <main>
+        {/* TODO: Spenden-Seite implementieren */}
+      </main>
+      {process.env.NODE_ENV === "development" && <Agentation />}
+    </>
   );
 }

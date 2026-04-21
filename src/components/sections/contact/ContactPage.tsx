@@ -162,7 +162,7 @@ export default function ContactPage() {
                 />
               </div>
 
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between pt-4 mt-2">
                 <p className="text-xs text-gray-400 hidden sm:block">
                   Wir antworten in der Regel innerhalb von 48 Stunden.
                 </p>

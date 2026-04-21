@@ -4,6 +4,7 @@ import Vortrage from "@/components/sections/programm/Vortrage";
 import Unterrichte from "@/components/sections/programm/Unterrichte";
 import Wochenplan from "@/components/sections/programm/Wochenplan";
 import ProgrammCTA from "@/components/sections/programm/ProgrammCTA";
+import { Agentation } from "agentation";
 
 export const metadata: Metadata = {
   title: "Programm",
@@ -13,12 +14,15 @@ export const metadata: Metadata = {
 
 export default function ProgrammPage() {
   return (
-    <main>
-      <ProgrammHero />
-      <Vortrage />
-      <Unterrichte />
-      <Wochenplan />
-      <ProgrammCTA />
-    </main>
+    <>
+      <main>
+        <ProgrammHero />
+        <Vortrage />
+        <Unterrichte />
+        <Wochenplan />
+        <ProgrammCTA />
+      </main>
+      {process.env.NODE_ENV === "development" && <Agentation />}
+    </>
   );
 }

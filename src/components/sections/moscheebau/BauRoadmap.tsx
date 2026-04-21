@@ -97,7 +97,6 @@ export default function BauRoadmap() {
                       </div>
                     ) : item.status === "current" ? (
                       <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center shadow-[0_2px_8px_rgba(242,167,82,0.3)] relative">
-                        <div className="w-2.5 h-2.5 rounded-full bg-primary" />
                         <div className="absolute inset-0 rounded-full border-2 border-accent animate-ping opacity-30" />
                       </div>
                     ) : (

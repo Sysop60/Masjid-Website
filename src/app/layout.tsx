@@ -3,6 +3,7 @@ import { Instrument_Sans, Instrument_Serif, Plus_Jakarta_Sans, Lateef } from "ne
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import SmoothScroll from "@/components/providers/SmoothScroll";
 
 const instrumentSans = Instrument_Sans({
   variable: "--font-instrument-sans",
@@ -51,7 +52,9 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col font-sans text-gray-900 bg-[#fffdfa]">
         <Header />
-        <div className="flex-1 pt-20">{children}</div>
+        <SmoothScroll>
+          <div className="flex-1 pt-20">{children}</div>
+        </SmoothScroll>
         <Footer />
       </body>
     </html>

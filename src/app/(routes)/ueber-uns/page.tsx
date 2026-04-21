@@ -5,6 +5,7 @@ import Timeline from "@/components/sections/about/Timeline";
 import Values from "@/components/sections/about/Values";
 import Team from "@/components/sections/about/Team";
 import AboutCTA from "@/components/sections/about/AboutCTA";
+import { Agentation } from "agentation";
 
 export const metadata: Metadata = {
   title: "Über uns",
@@ -14,13 +15,14 @@ export const metadata: Metadata = {
 
 export default function UeberUnsPage() {
   return (
-    <main>
-      <AboutHero />
-      <WhoWeAre />
-      <Timeline />
-      <Values />
-      <Team />
-      <AboutCTA />
-    </main>
+    <>
+      <main>
+        <AboutHero />
+        <WhoWeAre />
+        <Values />
+        <Team />
+      </main>
+      {process.env.NODE_ENV === "development" && <Agentation />}
+    </>
   );
 }

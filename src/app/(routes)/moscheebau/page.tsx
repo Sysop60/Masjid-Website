@@ -4,6 +4,7 @@ import BauProgress from "@/components/sections/moscheebau/BauProgress";
 import BauInfo from "@/components/sections/moscheebau/BauInfo";
 import BauRoadmap from "@/components/sections/moscheebau/BauRoadmap";
 import BauSpenden from "@/components/sections/moscheebau/BauSpenden";
+import { Agentation } from "agentation";
 
 export const metadata: Metadata = {
   title: "Moscheebau",
@@ -13,12 +14,15 @@ export const metadata: Metadata = {
 
 export default function MoscheebauPage() {
   return (
-    <main>
-      <BauHero />
-      <BauProgress />
-      <BauInfo />
-      <BauRoadmap />
-      <BauSpenden />
-    </main>
+    <>
+      <main>
+        <BauHero />
+        <BauProgress />
+        <BauInfo />
+        <BauRoadmap />
+        <BauSpenden />
+      </main>
+      {process.env.NODE_ENV === "development" && <Agentation />}
+    </>
   );
 }

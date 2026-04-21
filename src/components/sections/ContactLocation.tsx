@@ -32,7 +32,7 @@ export default function ContactLocation() {
             <div className="relative z-10 grid lg:grid-cols-2 gap-10">
               {/* Left: Info + Form */}
               <div>
-                <h2 className="text-3xl tracking-tight font-semibold text-primary font-serif">
+                <h2 className="text-4xl md:text-5xl font-normal text-primary tracking-tight font-serif">
                   Kontakt &amp; <span className="italic">Anfahrt</span>
                 </h2>
                 <p className="mt-2 text-primary/70">
@@ -79,7 +79,7 @@ export default function ContactLocation() {
                       type="text"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full rounded-xl bg-white/40 backdrop-blur-xl px-4 py-2.5 text-sm ring-1 ring-white/50 border border-white/30 shadow-[inset_0_1px_0_rgba(255,255,255,0.4)] focus:outline-none focus:bg-white/70 focus:ring-primary/30 focus:border-primary/20 transition-all placeholder:text-primary/35"
+                      className="w-full rounded-xl bg-white/40 backdrop-blur-xl px-4 py-2.5 text-sm ring-1 ring-primary/15 border border-primary/12 shadow-[inset_0_1px_0_rgba(255,255,255,0.4)] focus:outline-none focus:bg-white/70 focus:ring-primary/30 focus:border-primary/20 transition-all placeholder:text-primary/35"
                       placeholder="Dein Name"
                     />
                   </div>
@@ -92,7 +92,7 @@ export default function ContactLocation() {
                       type="email"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full rounded-xl bg-white/40 backdrop-blur-xl px-4 py-2.5 text-sm ring-1 ring-white/50 border border-white/30 shadow-[inset_0_1px_0_rgba(255,255,255,0.4)] focus:outline-none focus:bg-white/70 focus:ring-primary/30 focus:border-primary/20 transition-all placeholder:text-primary/35"
+                      className="w-full rounded-xl bg-white/40 backdrop-blur-xl px-4 py-2.5 text-sm ring-1 ring-primary/15 border border-primary/12 shadow-[inset_0_1px_0_rgba(255,255,255,0.4)] focus:outline-none focus:bg-white/70 focus:ring-primary/30 focus:border-primary/20 transition-all placeholder:text-primary/35"
                       placeholder="dein@mail.de"
                     />
                   </div>
@@ -105,7 +105,7 @@ export default function ContactLocation() {
                       rows={4}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full rounded-xl bg-white/40 backdrop-blur-xl px-4 py-2.5 text-sm ring-1 ring-white/50 border border-white/30 shadow-[inset_0_1px_0_rgba(255,255,255,0.4)] focus:outline-none focus:bg-white/70 focus:ring-primary/30 focus:border-primary/20 transition-all placeholder:text-primary/35 resize-none"
+                      className="w-full rounded-xl bg-white/40 backdrop-blur-xl px-4 py-2.5 text-sm ring-1 ring-primary/15 border border-primary/12 shadow-[inset_0_1px_0_rgba(255,255,255,0.4)] focus:outline-none focus:bg-white/70 focus:ring-primary/30 focus:border-primary/20 transition-all placeholder:text-primary/35 resize-none"
                       placeholder="Wie können wir helfen?"
                     />
                   </div>

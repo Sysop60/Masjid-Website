@@ -1,7 +1,6 @@
-import Image from "next/image";
 import { Heart, BookOpen, Users } from "lucide-react";
 import BlurFade from "@/components/ui/BlurFade";
-import mosaicPattern from "@/assets/images/Gemini_Generated_Image_mbc1twmbc1twmbc1.png";
+import MosaicPattern from "@/components/ui/MosaicPattern";
 
 const VALUES = [
   {
@@ -26,24 +25,15 @@ const VALUES = [
 
 export default function Values() {
   return (
-    <section className="relative py-24 sm:py-32 overflow-hidden">
-      {/* Mosaic Pattern Background */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <Image
-          src={mosaicPattern}
-          alt=""
-          className="absolute -top-16 -right-32 w-[500px] h-[500px] object-contain opacity-[0.08]"
-          style={{ maskImage: "radial-gradient(ellipse, black 30%, transparent 70%)" }}
-          aria-hidden="true"
-        />
-        <Image
-          src={mosaicPattern}
-          alt=""
-          className="absolute -bottom-24 -left-36 w-[600px] h-[600px] object-contain opacity-[0.06]"
-          style={{ maskImage: "radial-gradient(ellipse, black 30%, transparent 70%)" }}
-          aria-hidden="true"
-        />
-      </div>
+    <section className="relative py-24 sm:py-32 overflow-hidden bg-warm-white">
+      <MosaicPattern variant="corners" />
+
+      {/* Ambient warmth */}
+      <div className="absolute top-1/3 right-0 w-[400px] h-[400px] bg-accent/[0.04] rounded-full blur-[120px] pointer-events-none" />
+
+      {/* Soft edges */}
+      <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white to-transparent pointer-events-none z-10" />
+      <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white to-transparent pointer-events-none z-10" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <BlurFade className="mb-16 text-center">

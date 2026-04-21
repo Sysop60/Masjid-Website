@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Agentation } from "agentation";
 
 export const metadata: Metadata = {
   title: "Galerie",
@@ -7,8 +8,11 @@ export const metadata: Metadata = {
 
 export default function GaleriePage() {
   return (
-    <main>
-      {/* TODO: Galerie-Seite implementieren */}
-    </main>
+    <>
+      <main>
+        {/* TODO: Galerie-Seite implementieren */}
+      </main>
+      {process.env.NODE_ENV === "development" && <Agentation />}
+    </>
   );
 }
