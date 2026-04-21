@@ -4,6 +4,7 @@ export const NAV_ITEMS: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "Über uns", href: "/ueber-uns" },
   { label: "Programm", href: "/programm" },
+  { label: "Moscheebau", href: "/moscheebau" },
   { label: "Kontakt", href: "/kontakt" },
 ];
 
