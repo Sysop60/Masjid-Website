@@ -3,7 +3,7 @@ import { NavItem } from "@/types";
 export const NAV_ITEMS: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "Über uns", href: "/ueber-uns" },
-  { label: "Programm", href: "/veranstaltungen" },
+  { label: "Programm", href: "/programm" },
   { label: "Kontakt", href: "/kontakt" },
 ];
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { Calendar } from "lucide-react";
-import BlurFade from "@/components/ui/blur-fade";
+import BlurFade from "@/components/ui/BlurFade";
 import type { PrayerTime } from "@/lib/mawaqit";
 
 interface Props {

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import mosaicPattern from "@/assets/images/Gemini_Generated_Image_mbc1twmbc1twmbc1.png";
-import BlurFade from "@/components/ui/blur-fade";
+import BlurFade from "@/components/ui/BlurFade";
 
 export default function AboutLetter() {
   return (

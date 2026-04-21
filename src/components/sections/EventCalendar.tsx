@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { ArrowRight, Calendar, MapPin } from "lucide-react";
-import BlurFade from "@/components/ui/blur-fade";
-import backgroundBild from "@/assets/images/Background-bild.jpg";
+import BlurFade from "@/components/ui/BlurFade";
 import imgGebete from "@/assets/images/muslim-praying-sujud-posture.jpg";
 import imgQuran from "@/assets/images/muslims-reading-from-quran.jpg";
 import imgFreitag from "@/assets/images/matin-firouzabadi-vqiYsMeNJOo-unsplash.jpg";

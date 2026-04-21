@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import moscheeHero from "@/assets/images/moschee-hero.png";
-import BlurFade from "@/components/ui/blur-fade";
+import BlurFade from "@/components/ui/BlurFade";
 
 export default function Hero() {
   return (

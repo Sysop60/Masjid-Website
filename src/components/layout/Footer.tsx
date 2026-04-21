@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { NAV_ITEMS, SITE_CONFIG } from "@/lib/constants";
 import mosaicPattern from "@/assets/images/Gemini_Generated_Image_mbc1twmbc1twmbc1.png";
-import BlurFade from "@/components/ui/blur-fade";
+import BlurFade from "@/components/ui/BlurFade";
 
 function FacebookIcon({ className }: { className?: string }) {
   return (

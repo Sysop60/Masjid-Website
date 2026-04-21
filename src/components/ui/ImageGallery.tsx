@@ -1,6 +1,6 @@
 "use client";
 
-import BlurFade from "@/components/ui/blur-fade";
+import BlurFade from "@/components/ui/BlurFade";
 
 const GALLERY_IMAGES = [
   "https://images.unsplash.com/photo-1564769625905-50e93615e769?q=80&h=800&w=800&auto=format&fit=crop",

@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { MapPin, Mail, Phone, Send, Globe } from "lucide-react";
-import BlurFade from "@/components/ui/blur-fade";
+import { MapPin, Phone, Send } from "lucide-react";
+import BlurFade from "@/components/ui/BlurFade";
 
 export default function ContactLocation() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });

@@ -3,7 +3,7 @@ import PrayerTimesBar from "@/components/sections/PrayerTimesBar";
 import AboutLetter from "@/components/sections/AboutLetter";
 import FeatureTiles from "@/components/sections/FeatureTiles";
 import EventCalendar from "@/components/sections/EventCalendar";
-import Gallery from "@/components/sections/Gallery";
+import ImageGallery from "@/components/ui/ImageGallery";
 import ContactLocation from "@/components/sections/ContactLocation";
 import { Agentation } from "agentation";
 
@@ -14,7 +14,7 @@ export default function HomePage() {
       <PrayerTimesBar />
       <AboutLetter />
       <EventCalendar />
-      <Gallery />
+      <ImageGallery />
       <ContactLocation />
       {process.env.NODE_ENV === "development" && <Agentation />}
     </>
